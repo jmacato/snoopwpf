@@ -121,7 +121,7 @@ public abstract class TreeService : IDisposable, INotifyPropertyChanged
         {
             TreeType.Visual => new VisualTreeService(),
             TreeType.Logical => new LogicalTreeService(),
-            TreeType.Automation => new AutomationPeerTreeService(),
+            TreeType.Automation => new LogicalTreeService(),
             _ => throw new ArgumentOutOfRangeException(nameof(treeType), treeType, null)
         };
     }
@@ -234,7 +234,7 @@ public sealed class AutomationPeerTreeService : TreeService
         }
     }
 }
-
+/*
 public sealed class AutomationElementTreeService : TreeService
 {
     private static readonly TreeWalker treeWalker = TreeWalker.ControlViewWalker;
@@ -272,4 +272,4 @@ public sealed class AutomationElementTreeService : TreeService
             }
         }
     }
-}
+}*/

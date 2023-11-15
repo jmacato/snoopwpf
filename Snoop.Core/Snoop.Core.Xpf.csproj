@@ -1,0 +1,27 @@
+<Project Sdk="Xpf.Sdk/9999.0.0-localbuild">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+
+    <RootNamespace>Snoop</RootNamespace>
+
+    <UseWpf>true</UseWpf>
+    <UseWindowsForms>true</UseWindowsForms>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <EnableWindowsTargeting>True</EnableWindowsTargeting>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Resource Include="..\Artwork\*.ico" />
+
+    <Compile Remove="PowerShell\**\*.cs"/>
+    <Page Remove="PowerShell\**\*.xaml"/>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="JetBrains.Annotations" Version="2023.2.0" />
+  </ItemGroup>
+  
+  <PropertyGroup Condition="'$(TargetFramework)' == 'net5.0-windows'">
+    <DefineConstants>$(DefineConstants);USE_WPF_BINDING_DIAG</DefineConstants>
+  </PropertyGroup>
+</Project>

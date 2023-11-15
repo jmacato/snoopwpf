@@ -3,6 +3,8 @@
 // Please see http://go.microsoft.com/fwlink/?LinkID=131993 for details.
 // All other rights reserved.
 
+using System.Runtime.CompilerServices;
+
 namespace Snoop.Controls;
 
 using System;
@@ -92,7 +94,7 @@ public class ProperTreeView : TreeView
             return false;
         }
 
-        var shouldReduce = GetRemainingStackSize() < MinStackRequired;
+        var shouldReduce = !RuntimeHelpers.TryEnsureSufficientExecutionStack();// GetRemainingStackSize() < MinStackRequired;
         var shouldWiden = shouldReduce == false && curNode.IsSelected && curItem == rootItem;
 
         if (shouldReduce == false

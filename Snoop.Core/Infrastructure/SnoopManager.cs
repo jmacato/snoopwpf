@@ -62,6 +62,14 @@ public class SnoopManager
         }
     }
 
+    public static void StartSnoop()
+    {
+        new SnoopManager().RunInCurrentAppDomain(new TransientSettingsData
+        {
+
+        });
+    }
+
     private bool StartSnoopInstance(string settingsFile)
     {
         LogHelper.WriteLine("Starting snoop...");
@@ -223,7 +231,7 @@ public class SnoopManager
             return Assembly.GetExecutingAssembly();
         }
 
-#if NETCOREAPP3_1 || NET5_0_OR_GREATER
+#if NETCOREAPP3_1 || NET5_0
             if (args.Name?.StartsWith("System.Management.Automation,") == true
                 && PowerShell.ShellConstants.TryGetPowerShellCoreInstallPath(out var powershellCoreInstallPath))
             {

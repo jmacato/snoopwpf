@@ -17,7 +17,6 @@
                              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
                              xmlns:methodsTab="clr-namespace:Snoop.Views.MethodsTab"
                              xmlns:options="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"
-                             xmlns:powerShell="clr-namespace:Snoop.PowerShell"
                              xmlns:selectionHighlight="clr-namespace:Snoop.Infrastructure.SelectionHighlight"
                              xmlns:snoop="clr-namespace:Snoop"
                              xmlns:tree="clr-namespace:Snoop.Data.Tree"
@@ -412,8 +411,7 @@
                             </TextBlock.ToolTip>
                         </TextBlock>
                     </TabItem.Header>
-
-                    <powerShell:EmbeddedShellView IsSelected="{Binding IsSelected, RelativeSource={RelativeSource AncestorType={x:Type TabItem}}}" />
+                    
                 </TabItem>
 
                 <TabItem>
