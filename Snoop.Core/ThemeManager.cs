@@ -5,7 +5,7 @@ using System.Collections;
 using System.Diagnostics;
 using System.Windows;
 using System.Windows.Media;
-using JetBrains.Annotations;
+
 using Microsoft.Win32;
 using Snoop.Infrastructure;
 
@@ -55,7 +55,6 @@ public class ThemeManager
         window.Resources.MergedDictionaries.Remove(resourceDictionaryToRemove);
     }
 
-    [MustUseReturnValue]
     private static bool AppsUseLightTheme()
     {
         try

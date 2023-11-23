@@ -3,7 +3,7 @@
 using System;
 using System.ComponentModel;
 using System.Xml.Serialization;
-using JetBrains.Annotations;
+
 
 [Serializable]
 public abstract class SnoopFilter : INotifyPropertyChanged
@@ -101,7 +101,7 @@ public abstract class SnoopFilter : INotifyPropertyChanged
 
     public event PropertyChangedEventHandler? PropertyChanged;
 
-    [NotifyPropertyChangedInvocator]
+
     protected void RaisePropertyChanged(string propertyName)
     {
         this.isDirty = true;

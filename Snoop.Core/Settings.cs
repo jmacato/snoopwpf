@@ -7,7 +7,7 @@ using System.Collections.ObjectModel;
 using System.IO;
 using System.Runtime.CompilerServices;
 using System.Xml.Serialization;
-using JetBrains.Annotations;
+
 using Snoop.Infrastructure;
 using Snoop.Views.DebugListenerTab;
 
@@ -145,7 +145,7 @@ public sealed class Settings : SettingsBase<Settings>
         this.EventTrackers.UpdateWith(settings.EventTrackers);
     }
 
-    [NotifyPropertyChangedInvocator]
+
     protected override void OnPropertyChanged([CallerMemberName] string? propertyName = null)
     {
         base.OnPropertyChanged(propertyName);
@@ -157,7 +157,7 @@ public sealed class Settings : SettingsBase<Settings>
     }
 }
 
-[PublicAPI]
+
 public enum ThemeMode
 {
     Auto = 0,

@@ -4,11 +4,11 @@ namespace Snoop.Data;
 using System;
 using System.IO;
 using System.Xml.Serialization;
-using JetBrains.Annotations;
+
 using Snoop.Core;
 using Snoop.Infrastructure;
 
-[PublicAPI]
+
 public sealed class TransientSettingsData
 {
     private static readonly XmlSerializer serializer = new(typeof(TransientSettingsData));
@@ -75,7 +75,7 @@ public sealed class TransientSettingsData
     }
 }
 
-[PublicAPI]
+
 public enum MultipleAppDomainMode
 {
     Ask = 0,
@@ -83,7 +83,7 @@ public enum MultipleAppDomainMode
     NeverUse = 2
 }
 
-[PublicAPI]
+
 public enum MultipleDispatcherMode
 {
     Ask = 0,
@@ -91,7 +91,7 @@ public enum MultipleDispatcherMode
     NeverUse = 2
 }
 
-[PublicAPI]
+
 public enum SnoopStartTarget
 {
     SnoopUI = 0,

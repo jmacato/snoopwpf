@@ -19,7 +19,7 @@ using System.Windows.Data;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Threading;
-using JetBrains.Annotations;
+
 using Snoop.Converters;
 using Snoop.Infrastructure.Diagnostics;
 using Snoop.Infrastructure.Helpers;
@@ -1103,7 +1103,7 @@ public class PropertyInformation : DependencyObject, IComparable, INotifyPropert
     #region INotifyPropertyChanged Members
     public event PropertyChangedEventHandler? PropertyChanged;
 
-    [NotifyPropertyChangedInvocator]
+
     protected void OnPropertyChanged(string propertyName)
     {
         this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

@@ -8,7 +8,7 @@ namespace Snoop.Controls.ValueEditors;
 using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using JetBrains.Annotations;
+
 
 public class EnumValueEditor : ValueEditor
 {
@@ -56,7 +56,7 @@ public class EnumValueEditor : ValueEditor
     }
 }
 
-[PublicAPI]
+
 public class EnumValueWrapper : INotifyPropertyChanged
 {
 #pragma warning disable CS0067

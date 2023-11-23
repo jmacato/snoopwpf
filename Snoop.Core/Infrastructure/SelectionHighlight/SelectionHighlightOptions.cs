@@ -3,7 +3,7 @@ namespace Snoop.Infrastructure.SelectionHighlight;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Media;
-using JetBrains.Annotations;
+
 
 public sealed class SelectionHighlightOptions : INotifyPropertyChanged
 {
@@ -102,7 +102,7 @@ public sealed class SelectionHighlightOptions : INotifyPropertyChanged
         this.BorderBrush.Freeze();
     }
 
-    [NotifyPropertyChangedInvocator]
+
     private void OnPropertyChanged([CallerMemberName] string? propertyName = null)
     {
         this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

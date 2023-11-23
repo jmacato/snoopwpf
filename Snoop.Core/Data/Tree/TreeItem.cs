@@ -14,7 +14,7 @@ using System.Windows;
 using System.Windows.Automation;
 using System.Windows.Controls;
 using System.Windows.Media;
-using JetBrains.Annotations;
+
 using Snoop.Infrastructure;
 using Snoop.Windows;
 
@@ -338,7 +338,7 @@ public class TreeItem : INotifyPropertyChanged, IDisposable
         }
     }
 
-    [NotifyPropertyChangedInvocator]
+
     protected virtual void OnPropertyChanged(string propertyName)
     {
         this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

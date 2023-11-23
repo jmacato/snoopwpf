@@ -16,7 +16,7 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Input;
 using System.Windows.Media;
-using JetBrains.Annotations;
+
 using Snoop.Core;
 using Snoop.Infrastructure;
 using Snoop.Windows;
@@ -214,7 +214,7 @@ public partial class EventsView : INotifyPropertyChanged, IDisposable
     #region INotifyPropertyChanged Members
     public event PropertyChangedEventHandler? PropertyChanged;
 
-    [NotifyPropertyChangedInvocator]
+
     protected void OnPropertyChanged(string propertyName)
     {
         this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

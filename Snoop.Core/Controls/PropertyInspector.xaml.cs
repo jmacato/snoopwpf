@@ -16,7 +16,7 @@ using System.Linq;
 using System.Text;
 using System.Windows;
 using System.Windows.Input;
-using JetBrains.Annotations;
+
 using Snoop.Converters;
 using Snoop.Core;
 using Snoop.Data;
@@ -778,7 +778,7 @@ public partial class PropertyInspector : INotifyPropertyChanged
     #region INotifyPropertyChanged Members
     public event PropertyChangedEventHandler? PropertyChanged;
 
-    [NotifyPropertyChangedInvocator]
+
     protected void OnPropertyChanged(string propertyName)
     {
         this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

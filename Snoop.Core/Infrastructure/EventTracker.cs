@@ -11,7 +11,7 @@ using System.ComponentModel;
 using System.Diagnostics;
 using System.Windows;
 using System.Windows.Threading;
-using JetBrains.Annotations;
+
 
 [DebuggerDisplay("{" + nameof(Id) + "}")]
 [Serializable]
@@ -136,7 +136,7 @@ public class EventTracker : INotifyPropertyChanged, IComparable, IDisposable
     #region INotifyPropertyChanged Members
     public event PropertyChangedEventHandler? PropertyChanged;
 
-    [NotifyPropertyChangedInvocator]
+
     protected void OnPropertyChanged(string propertyName)
     {
         this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
@@ -211,7 +211,7 @@ public class TrackedEvent : EventArgs, INotifyPropertyChanged
     #region INotifyPropertyChanged Members
     public event PropertyChangedEventHandler? PropertyChanged;
 
-    [NotifyPropertyChangedInvocator]
+
     protected void OnPropertyChanged(string propertyName)
     {
         this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

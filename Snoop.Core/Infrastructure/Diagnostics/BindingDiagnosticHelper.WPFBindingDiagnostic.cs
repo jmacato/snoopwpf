@@ -9,7 +9,7 @@ namespace Snoop.Infrastructure.Diagnostics
     using System.Text;
     using System.Windows.Data;
     using System.Windows.Diagnostics;
-    using JetBrains.Annotations;
+
     using Snoop.Infrastructure.Helpers;
 
     public partial class BindingDiagnosticHelper
@@ -85,7 +85,7 @@ namespace Snoop.Infrastructure.Diagnostics
         }
     }
 
-    [PublicAPI]
+
     public class FailedBinding
     {
         private readonly ObservableCollection<FailedBindingDetail> failedBindingDetails;
@@ -124,7 +124,7 @@ namespace Snoop.Infrastructure.Diagnostics
         }
     }
 
-    [PublicAPI]
+
     public class FailedBindingDetail
     {
         public FailedBindingDetail(FailedBinding failedBinding, TraceEventType eventType, int code, string message, params object[]? parameters)

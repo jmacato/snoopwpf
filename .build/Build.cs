@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using JetBrains.Annotations;
+
 using Nuke.Common;
 using Nuke.Common.CI;
 using Nuke.Common.CI.AppVeyor;
@@ -181,7 +181,7 @@ class Build : NukeBuild
                 .SetVerbosity(DotNetVerbosity.Minimal));
         });
 
-    [PublicAPI]
+
     Target CompileTestHarnesses => _ => _
         .DependsOn(Restore)
         .Executes(() =>
@@ -291,7 +291,7 @@ class Build : NukeBuild
             }
         });
 
-    [PublicAPI]
+
     Target CheckSums => _ => _
         .TriggeredBy(Pack, Setup)
         .Produces(ArtifactsDirectory / "*.sha256")

@@ -5,7 +5,7 @@ using System.ComponentModel;
 using System.Diagnostics.CodeAnalysis;
 using System.Reflection;
 using System.Runtime.CompilerServices;
-using JetBrains.Annotations;
+
 
 public class BindableType : INotifyPropertyChanged
 {
@@ -83,7 +83,7 @@ public class BindableType : INotifyPropertyChanged
         return type?.Type;
     }
 
-    [NotifyPropertyChangedInvocator]
+
     protected virtual void OnPropertyChanged([CallerMemberName] string? propertyName = null)
     {
         this.PropertyChanged?.Invoke(this, new(propertyName));

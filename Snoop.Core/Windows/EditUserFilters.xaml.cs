@@ -10,7 +10,7 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Windows;
 using System.Windows.Controls;
-using JetBrains.Annotations;
+
 using Snoop.Infrastructure;
 
 public partial class EditUserFilters : INotifyPropertyChanged
@@ -180,7 +180,7 @@ public partial class EditUserFilters : INotifyPropertyChanged
         }
     }
 
-    [NotifyPropertyChangedInvocator]
+
     protected void OnPropertyChanged(string propertyName)
     {
         this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

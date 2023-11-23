@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.Serialization;
-using JetBrains.Annotations;
+
 
 [DebuggerDisplay("{" + nameof(DisplayName) + "}")]
 [Serializable]
@@ -129,7 +129,7 @@ public class PropertyFilterSet : INotifyPropertyChanged
         };
     }
 
-    [NotifyPropertyChangedInvocator]
+
     protected virtual void OnPropertyChanged([CallerMemberName] string? propertyName = null)
     {
         this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

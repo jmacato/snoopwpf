@@ -14,7 +14,7 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Input;
 using System.Windows.Threading;
-using JetBrains.Annotations;
+
 using Snoop.Infrastructure;
 using Snoop.Windows;
 
@@ -469,7 +469,7 @@ public partial class PropertyGrid2 : INotifyPropertyChanged
     #region INotifyPropertyChanged Members
     public event PropertyChangedEventHandler? PropertyChanged;
 
-    [NotifyPropertyChangedInvocator]
+
     protected void OnPropertyChanged(string propertyName)
     {
         this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

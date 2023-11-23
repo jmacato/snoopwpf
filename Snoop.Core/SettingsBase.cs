@@ -7,7 +7,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Xml;
 using System.Xml.Serialization;
-using JetBrains.Annotations;
+
 using Snoop.Infrastructure;
 
 [Serializable]
@@ -92,7 +92,7 @@ public abstract class SettingsBase<T> : INotifyPropertyChanged
         this.Serializer.Serialize(xmlWriter, this);
     }
 
-    [NotifyPropertyChangedInvocator]
+
     protected virtual void OnPropertyChanged([CallerMemberName] string? propertyName = null)
     {
         this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

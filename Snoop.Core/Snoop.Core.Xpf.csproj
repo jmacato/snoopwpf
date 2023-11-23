@@ -1,4 +1,4 @@
-<Project Sdk="Xpf.Sdk/9999.0.0-localbuild">
+<Project Sdk="Xpf.Sdk/1.0.1-cibuild001120">
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
 
@@ -18,7 +18,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="JetBrains.Annotations" Version="2023.2.0" />
   </ItemGroup>
   
   <PropertyGroup Condition="'$(TargetFramework)' == 'net5.0-windows'">

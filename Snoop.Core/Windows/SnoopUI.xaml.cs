@@ -19,7 +19,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Media3D;
 using System.Windows.Threading;
-using JetBrains.Annotations;
+
 using Snoop.Core;
 using Snoop.Data.Tree;
 using Snoop.Infrastructure;
@@ -888,7 +888,7 @@ public sealed partial class SnoopUI : INotifyPropertyChanged
 
     public event PropertyChangedEventHandler? PropertyChanged;
 
-    [NotifyPropertyChangedInvocator]
+
     private void OnPropertyChanged(string propertyName)
     {
         this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

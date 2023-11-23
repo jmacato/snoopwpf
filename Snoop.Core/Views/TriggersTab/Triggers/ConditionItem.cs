@@ -4,7 +4,7 @@ using System;
 using System.ComponentModel;
 using System.Windows;
 using System.Windows.Data;
-using JetBrains.Annotations;
+
 using Snoop.Infrastructure;
 using Snoop.Infrastructure.Helpers;
 
@@ -226,7 +226,7 @@ public class ConditionItem : DependencyObject, IDisposable, INotifyPropertyChang
 
     public event PropertyChangedEventHandler? PropertyChanged;
 
-    [NotifyPropertyChangedInvocator]
+
     protected void OnPropertyChanged(string propertyName)
     {
         this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

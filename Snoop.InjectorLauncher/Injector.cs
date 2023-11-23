@@ -5,7 +5,7 @@ using System.ComponentModel;
 using System.IO;
 using System.Reflection;
 using System.Runtime.InteropServices;
-using JetBrains.Annotations;
+
 using Snoop.Infrastructure;
 
 /// <summary>
@@ -41,7 +41,7 @@ public static class Injector
         }
     }
 
-    [PublicAPI]
+
     public static void InjectIntoProcess(IntPtr windowHandle, InjectorData injectorData)
     {
         var processFromHandle = ProcessWrapper.FromWindowHandle(windowHandle);
@@ -54,7 +54,7 @@ public static class Injector
         InjectIntoProcess(processFromHandle, injectorData);
     }
 
-    [PublicAPI]
+
     public static void InjectIntoProcess(ProcessWrapper processWrapper, InjectorData injectorData)
     {
         InjectSnoop(processWrapper, injectorData);
